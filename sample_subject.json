@@ -1,0 +1,35 @@
+{
+  "full_name": "",
+  "email": "jordan.blake@northbridge.co",
+  "phone": "+1-415-555-0138",
+  "country": "US",
+  "role": "Business Development Manager",
+  "organization": "Northbridge Advisory",
+  "website": "https://northbridge.co",
+  "social_profiles": {
+    "LinkedIn": "https://www.linkedin.com/in/jordanblake",
+    "X": "https://x.com/jordanblake",
+    "GitHub": "https://github.com/jordanblake",
+    "Facebook": "https://www.facebook.com/jordanblake",
+    "Instagram": "https://www.instagram.com/jordanblake"
+  },
+  "known_aliases": ["J. Blake", "Jordan B."],
+  "activity_signals": [
+    {
+      "source": "LinkedIn API",
+      "category": "professional_presence",
+      "confidence": 92,
+      "timestamp_utc": "2026-03-13T10:15:00Z",
+      "details": "Profile active with recent updates"
+    },
+    {
+      "source": "Company Website",
+      "category": "organizational_affiliation",
+      "confidence": 88,
+      "timestamp_utc": "2026-03-12T14:30:00Z",
+      "details": "Leadership page references subject"
+    }
+  ],
+  "notes": "Provided directly by the subject for onboarding.",
+  "consent_confirmed": true
+}

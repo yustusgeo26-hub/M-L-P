@@ -1,0 +1,61 @@
+{
+  "generated_at_utc": "2026-03-13T20:02:39.676169+00:00",
+  "subject": {
+    "full_name": "",
+    "email": "jordan.blake@northbridge.co",
+    "phone": "+1-415-555-0138",
+    "country": "US",
+    "role": "Business Development Manager",
+    "organization": "Northbridge Advisory",
+    "social_profiles": {
+      "LinkedIn": "https://www.linkedin.com/in/jordanblake",
+      "X": "https://x.com/jordanblake",
+      "GitHub": "https://github.com/jordanblake",
+      "Facebook": "https://www.facebook.com/jordanblake",
+      "Instagram": "https://www.instagram.com/jordanblake"
+    },
+    "website": "https://northbridge.co",
+    "notes": "Provided directly by the subject for onboarding.",
+    "known_aliases": [
+      "J. Blake",
+      "Jordan B."
+    ],
+    "activity_signals": [
+      {
+        "source": "LinkedIn API",
+        "category": "professional_presence",
+        "confidence": 92,
+        "timestamp_utc": "2026-03-13T10:15:00Z",
+        "details": "Profile active with recent updates"
+      },
+      {
+        "source": "Company Website",
+        "category": "organizational_affiliation",
+        "confidence": 88,
+        "timestamp_utc": "2026-03-12T14:30:00Z",
+        "details": "Leadership page references subject"
+      }
+    ],
+    "consent_confirmed": true
+  },
+  "profile_completeness_score": 90,
+  "consistency_score": 100,
+  "signal_strength_score": 100,
+  "operational_risk_score": 25,
+  "trust_tier": "Tier-1 / High Confidence",
+  "findings": [
+    "Profile completeness score: 90/100.",
+    "Data consistency score: 100/100.",
+    "Signal strength score: 100/100.",
+    "Operational risk score: 25/100.",
+    "Consent status: confirmed.",
+    "Provided social endpoints: 5.",
+    "Activity signals evaluated: 2.",
+    "Observed email domain: northbridge.co."
+  ],
+  "recommended_next_steps": [
+    "Attach this report to a case ID and evidence owner.",
+    "Schedule periodic refresh of supplied identifiers."
+  ],
+  "profile_fingerprint_sha256": "226602b2c622cff4299b8ee8c3a3d7b0d58e3dabd23e576594da0b622a2fa8ff"
+}
