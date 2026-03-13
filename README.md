@@ -2,56 +2,42 @@
 
 A practical, production-oriented project that generates professional digital fingerprint reports from **authorized, supplied data**.
 
-## What changed (based on your request)
-- Input can now be **just email or phone number**.
-- Dashboard now supports many social endpoints (not only X/GitHub): LinkedIn, X, GitHub, Facebook, Instagram, YouTube, TikTok, Telegram, and Reddit.
-- Validation errors were hardened so malformed signal rows fail clearly.
+## What changed (error-fix pass)
+- Input supports **email or phone only** (full name optional).
+- Added more social endpoints (LinkedIn, X, GitHub, Facebook, Instagram, YouTube, TikTok, Telegram, Reddit).
+- Improved Streamlit compatibility to avoid common UI parameter issues.
+- Added dependency filename aliases: `requirements.txt`, `requirement.txt`, and `requirement.text`.
 
-## Features
-- Streamlit intelligence dashboard (`app.py`) for analysts.
-- CLI report generator (`digital_fingerprint.py`) for automation/pipelines.
-- JSON + Markdown report exports.
-- Scoring model: completeness, consistency, signal strength, operational risk, and trust tier.
-
-## Project files
-- `app.py` → interactive dashboard.
-- `digital_fingerprint.py` → core engine + CLI.
-- `sample_subject.json` → sample input.
-- `requirements.txt` and `requirement.text` → dependency lists.
-
-## 1) Installation
+## Install
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 2) Run dashboard (recommended)
+> If you accidentally run one of these, they also work:
+> - `pip install -r requirement.txt`
+> - `pip install -r requirement.text`
+
+## Run dashboard
 ```bash
 streamlit run app.py
 ```
-Then open the local URL shown in terminal (usually `http://localhost:8501`).
+Open `http://localhost:8501`.
 
-## 3) Run via CLI
+## Run CLI
 ```bash
 python digital_fingerprint.py --input sample_subject.json --json-out fingerprint_report.json --md-out fingerprint_report.md
 ```
 
 ## Input rules
-- Minimum required: **email OR phone** (full name optional).
-- Add more social endpoints + activity signals to increase report confidence.
+- Minimum required: **email OR phone**.
+- Add social endpoints and activity signals for stronger confidence.
 
-## Troubleshooting
-- If `streamlit: command not found`, activate your virtual environment first.
-- If dependencies fail, run:
-  ```bash
-  pip install --upgrade pip
-  pip install -r requirements.txt
-  ```
-- If port `8501` is busy:
-  ```bash
-  streamlit run app.py --server.port 8502
-  ```
+## Common errors fixed
+- Missing/incorrect requirements filename (`requirement` vs `requirements`) → alias files added.
+- Streamlit chart/editor width compatibility issues → standardized to stable parameters.
+- Invalid signal rows → explicit validation and readable error messages.
 
 ## Important boundaries
-This project is designed for legal/ethical workflows. It does **not** do hidden scraping or private data extraction from phone/email alone.
+This project is for legal/ethical workflows. It does **not** perform hidden scraping from phone/email by itself.

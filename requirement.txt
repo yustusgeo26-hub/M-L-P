@@ -1,0 +1,4 @@
+# Alias file to reduce setup errors.
+# Preferred install command:
+#   pip install -r requirements.txt
+-r requirements.txt

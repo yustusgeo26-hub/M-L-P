@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from dataclasses import asdict
 from datetime import datetime
+from typing import Any, Dict, List
 
 import pandas as pd
 import plotly.express as px
@@ -75,11 +76,11 @@ default_signal_table = pd.DataFrame(
         },
     ]
 )
-edited_signals = st.data_editor(default_signal_table, num_rows="dynamic", width="stretch")
+edited_signals = st.data_editor(default_signal_table, num_rows="dynamic", use_container_width=True)
 
 
-def parse_activity_signals(rows: list[dict]) -> list[ActivitySignal]:
-    parsed: list[ActivitySignal] = []
+def parse_activity_signals(rows: List[Dict[str, Any]]) -> List[ActivitySignal]:
+    parsed: List[ActivitySignal] = []
     for index, row in enumerate(rows, start=1):
         source = str(row.get("source", "")).strip()
         category = str(row.get("category", "")).strip()
@@ -160,7 +161,7 @@ if st.button("Generate Professional Report", type="primary"):
     )
     fig = px.bar(risk_df, x="dimension", y="score", color="dimension", height=380)
     fig.update_layout(template="plotly_dark", showlegend=False)
-    st.plotly_chart(fig, width="stretch")
+    st.plotly_chart(fig, use_container_width=True)
 
     st.subheader("Findings")
     for item in report.findings:
